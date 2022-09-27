@@ -1,0 +1,23 @@
+.cases-section {
+  padding: 56px 0 40px 0;
+  text-align: center;
+  color: $textColorSecondary;
+}
+
+.cases-desc {
+  margin-bottom: 31px;
+}
+
+.cases__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -4px;
+}
+
+.cases__gallery-item {
+  margin: 4px;
+}
+
+.cases__gallery-photo {
+  display: block;
+}
