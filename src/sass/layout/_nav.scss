@@ -1,6 +1,8 @@
 .nav {
+  max-width: 480px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .nav__item {
