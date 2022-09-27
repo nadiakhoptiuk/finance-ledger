@@ -1,1 +1,21 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+.button-accent {
+  // @include centeredFlex;
+  @extend %button;
+
+  color: inherit;
+  background-color: $accentColor;
+
+  &:hover,
+  &:focus {
+    background-color: $accentColorOnHover;
+  }
+}
+
+.button-transparent {
+  @extend %button;
+
+  border: 1px solid $bgColorPrimary;
+  color: $textColorPrimary;
+}

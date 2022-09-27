@@ -1,0 +1,40 @@
+.header {
+  padding-top: 22px;
+  background-color: grey;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  font-size: 28px;
+  line-height: 1.36;
+  color: $accentColor;
+  transform: scale(1);
+
+  transition: all 300ms $transition;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+    color: $accentColorOnHover;
+  }
+
+  &:hover .logo__icon,
+  &:focus .logo__icon {
+    color: $accentColorOnHover;
+  }
+}
+
+.logo__icon {
+  margin-right: 8px;
+  color: $accentColor;
+  fill: currentColor;
+  @include transitioned(color);
+}
+
+.logo__part {
+  color: $textColorPrimary;
+  margin-left: 8px;
+}
