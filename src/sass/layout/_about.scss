@@ -1,0 +1,28 @@
+.about-section {
+  padding-top: 0;
+  padding-bottom: 79px;
+  background-color: $accentColor;
+}
+
+.about-container {
+  position: relative;
+}
+
+.about__photo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 320px;
+}
+
+.about__content {
+  padding-top: 300px;
+}
+
+.about__pretitle {
+  text-align: left;
+}
+
+.about__title {
+  text-align: left;
+}

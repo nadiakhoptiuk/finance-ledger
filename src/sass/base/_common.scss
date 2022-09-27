@@ -1,7 +1,49 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+.section {
+  @media screen and (min-width: 1360px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.section-pretitle {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+    font-size: 18px;
+    line-height: 1.39;
+  }
+}
+
+.section-title {
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 1.38;
+  text-align: center;
+
+  @media screen and (min-width: 1360px) {
+    font-size: 40px;
+    line-height: 1.35;
+  }
+}
+
+.section-desc {
+  font-size: 16px;
+  line-height: 1.38;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
 .button-accent {
-  // @include centeredFlex;
   @extend %button;
 
   color: inherit;
