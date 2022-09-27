@@ -1,0 +1,19 @@
+.blog-section {
+  padding: 48px 0 58px 0;
+  text-align: left;
+  background-color: $accentColorSecondary;
+}
+
+.blog__pretitle {
+  text-align: left;
+}
+
+.blog__title {
+  text-align: left;
+}
+
+.blog__button:hover,
+.blog__button:focus {
+  background-color: $bgColorPrimary;
+  color: $accentColorSecondary;
+}

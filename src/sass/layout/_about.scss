@@ -27,3 +27,9 @@
 .about__title {
   text-align: left;
 }
+
+.about__button:hover,
+.about__button:focus {
+  background-color: $bgColorPrimary;
+  color: $accentColor;
+}
