@@ -23,6 +23,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: $textColorPrimary;
+
+  &:hover .company-social__icon,
+  &:focus .company-social__icon {
+    color: $accentColor;
+  }
+}
+
+.company-social__icon {
+  fill: currentColor;
+  @include transitioned(all);
 }
 
 .footer__copyright {
