@@ -41,14 +41,14 @@
 }
 
 .member-socials__item {
-  margin: 15px;
+  margin: 10px;
   opacity: 0.6;
   color: $textColorPrimary;
 
   @include transitioned(opacity);
   &:hover,
   &:focus {
-    opacity: 0.8;
+    opacity: 1;
   }
 }
 
@@ -64,7 +64,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(41, 40, 40, 0.6);
+  background-color: rgba(4, 4, 4, 0.5);
   opacity: 0;
 
   @include transitioned(opacity);
@@ -109,6 +109,10 @@
   .team__member-position {
     font-size: inherit;
     line-height: inherit;
+  }
+
+  .member-socials__item {
+    margin: 7px;
   }
 
   .team__gallery {
@@ -161,5 +165,9 @@
   .team__member-position {
     font-size: inherit;
     line-height: inherit;
+  }
+
+  .member-socials__item {
+    margin: 17px;
   }
 }
