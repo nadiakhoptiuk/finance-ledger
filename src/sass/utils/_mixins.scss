@@ -21,3 +21,7 @@
 @mixin transitioned($property) {
   transition: $property 300ms $transition;
 }
+
+@mixin transitionedSlowly($property) {
+  transition: $property 700ms $transition;
+}
