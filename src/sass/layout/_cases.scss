@@ -2,20 +2,33 @@
   padding: 56px 0 40px 0;
   text-align: center;
   color: $textColorSecondary;
+
+  @media screen and (min-width: 768px) {
+    padding: 48px 0 40px;
+  }
 }
 
 .cases-desc {
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 }
 
 .cases__gallery {
   display: flex;
   flex-wrap: wrap;
   margin: -4px;
+
+  @media screen and (min-width: 768px) {
+    margin: -9px;
+  }
 }
 
 .cases__gallery-item {
   margin: 4px;
+
+  @media screen and (min-width: 768px) {
+    margin: 8px;
+    width: calc((100% - 16px * 3) / 3);
+  }
 }
 
 .cases__gallery-photo {
