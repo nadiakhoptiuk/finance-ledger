@@ -10,6 +10,7 @@
   @include transitionedSlowly(all);
   &.visible {
     background-color: $textColorSecondary;
+    opacity: 0.8;
   }
 }
 
