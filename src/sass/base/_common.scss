@@ -1,6 +1,10 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
 .section {
+  @media screen and (min-width: 768px) {
+    padding-bottom: 40px;
+  }
+
   @media screen and (min-width: 1360px) {
     padding-top: 80px;
     padding-bottom: 80px;

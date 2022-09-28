@@ -2,24 +2,49 @@
   padding: 72px 0 50px 0;
   text-align: center;
   color: $textColorSecondary;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 50px;
+  }
 }
 
 .team-desc {
-  margin-bottom: 63px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 63px;
+  }
 }
 
 .team__gallery {
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    margin: -8px;
+  }
+}
+
+.team__gallery-item {
+  @media screen and (min-width: 768px) {
+    margin: 8px;
+    width: calc((100% - 16px * 3) / 3);
+  }
 }
 
 .team__gallery-item:not(:last-child) {
   margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .team__gallery-photo {
   display: block;
   margin-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 18px;
+  }
 }
 
 .team__member-name {
