@@ -13,7 +13,7 @@
   flex-wrap: wrap;
 }
 
-.team__gallery-item {
+.team__gallery-item:not(:last-child) {
   margin-bottom: 30px;
 }
 
