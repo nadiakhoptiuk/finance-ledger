@@ -1,12 +1,19 @@
 import { updateLink } from './setActiveLink';
 
 export function scrollToAnchor(evt) {
-  const anchorId = evt.target.attributes.href.value;
+  if (evt?.target?.nodeName !== 'A') return;
 
-  console.log(anchorId);
-  const neededSection = document.querySelector(`${anchorId}`);
+  const anchorId = evt?.target?.attributes?.href?.value;
 
-  neededSection.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  if (anchorId === '/index.html') {
+    return;
+  } else {
+    evt.preventDefault();
 
-  updateLink(anchorId);
+    const neededSection = document.querySelector(`${anchorId}`);
+
+    neededSection?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+
+    updateLink(anchorId);
+  }
 }

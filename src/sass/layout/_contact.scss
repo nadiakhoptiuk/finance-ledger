@@ -1,7 +1,19 @@
 .contact-section {
-  padding: 51px 0 25px;
+  padding: 0 0 25px;
   color: $textColorSecondary;
   background-color: $bgColorSecondary;
+}
+
+.contact__container {
+  padding-top: 51px;
+}
+
+.contact__photo-wrapper {
+  height: 220px;
+}
+
+.contact__photo {
+  object-position: center;
 }
 
 .contact-section__title {
@@ -25,24 +37,47 @@
   margin-bottom: 16px;
 }
 
-// .contact-form__label {
-//   font-size: 16px;
-//   line-height: 1.44;
-// }
-
 .contact-form__input {
   width: 100%;
   padding: 16px 8px;
   border: none;
   border-radius: 5px;
   background-color: $bgColorPrimary;
+  color: $accentColorSecondary;
 }
 
 .contact-form__input:focus {
   outline: 1px solid $accentColor;
 }
 
-.contact__button {
+.contact-form__input-name:focus + .contact-form__label,
+.contact-form__input-name:not(:placeholder-shown) + .contact-form__label {
+  transform: translateY(-40px);
+}
+
+.contact-form__input-email:focus + .contact-form__label,
+.contact-form__input-email:not(:placeholder-shown) + .contact-form__label {
+  transform: translateY(38px);
+}
+
+.contact-form__input:focus,
+.contact-form__input:not(:placeholder-shown) {
+  outline: 1px solid $accentColor;
+}
+
+.contact-form__field {
+  position: relative;
+}
+
+.contact-form__label {
+  position: absolute;
+  left: 8px;
+  bottom: 13px;
+
+  @include transitioned(all);
+}
+
+.contact__submit-button {
   padding: 16px 56px;
   color: $textColorPrimary;
 }

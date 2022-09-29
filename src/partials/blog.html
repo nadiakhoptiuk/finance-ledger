@@ -1,5 +1,60 @@
 <section class="blog-section section" id="blog">
-  <div class="container">
+  <div class="blog__photo-wrapper photo-wrapper">
+    <picture>
+      <source
+        srcset="
+          ../src/images/blog-desktop.webp    1x,
+          ../src/images/blog-desktop@2x.webp 2x
+        "
+        type="image/webp"
+        media="(min-width: 1360px)"
+      />
+      <source
+        srcset="
+          ../src/images/blog-desktop.jpg    1x,
+          ../src/images/blog-desktop@2x.jpg 2x
+        "
+        media="(min-width: 1360px)"
+      />
+      <source
+        srcset="
+          ../src/images/blog-tablet.webp    1x,
+          ../src/images/blog-tablet@2x.webp 2x
+        "
+        type="image/webp"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ../src/images/blog-tablet.jpg    1x,
+          ../src/images/blog-tablet@2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ../src/images/blog-mobile.webp    1x,
+          ../src/images/blog-mobile@2x.webp 2x
+        "
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ../src/images/blog-mobile.jpg    1x,
+          ../src/images/blog-mobile@2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+      />
+
+      <img
+        src="../src/images/blog-mobile.jpg"
+        alt="finance ledger blog photo"
+        class="blog__photo photo-wrapper__inner-photo"
+      />
+    </picture>
+  </div>
+
+  <div class="container blog__container">
     <div class="blog__content">
       <p class="blog__pretitle section-pretitle">April 16 2020</p>
       <h2 class="blog__title section-title">Blog Post One</h2>

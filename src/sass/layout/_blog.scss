@@ -1,7 +1,19 @@
 .blog-section {
-  padding: 48px 0 58px 0;
+  padding: 0 0 58px 0;
   text-align: left;
   background-color: $accentColorSecondary;
+}
+
+.blog__photo-wrapper {
+  height: 247px;
+}
+
+.blog__photo {
+  object-position: center;
+}
+
+.blog__container {
+  padding-top: 48px;
 }
 
 .blog__pretitle {
