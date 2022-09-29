@@ -4,13 +4,15 @@
   background-color: $accentColorSecondary;
 }
 
-.blog__photo-wrapper {
-  position: relative;
-  left: -20px;
-  top: -48px;
-  width: 320px;
-  max-width: 450px;
-  height: 247px;
+@media screen and (max-width: 767px) {
+  .blog__photo-wrapper {
+    position: relative;
+    left: -20px;
+    top: -48px;
+    width: 320px;
+    max-width: 450px;
+    height: 247px;
+  }
 }
 
 .blog__photo {
@@ -80,7 +82,7 @@
 
   .blog__photo-wrapper {
     position: absolute;
-    right: -12px;
+    right: -12px !important;
     top: -80px;
     width: 670px;
     max-width: 670px;
