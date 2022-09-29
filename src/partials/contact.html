@@ -1,93 +1,94 @@
 <section class="contact-section section" id="contact">
-  <div class="contact__photo-wrapper photo-wrapper">
-    <picture>
-      <source
-        srcset="
-          ../src/images/contact-desktop.webp    1x,
-          ../src/images/contact-desktop@2x.webp 2x
-        "
-        type="image/webp"
-        media="(min-width: 1360px)"
-      />
-      <source
-        srcset="
-          ../src/images/contact-desktop.jpg    1x,
-          ../src/images/contact-desktop@2x.jpg 2x
-        "
-        media="(min-width: 1360px)"
-      />
-      <source
-        srcset="
-          ../src/images/contact-tablet.webp    1x,
-          ../src/images/contact-tablet@2x.webp 2x
-        "
-        type="image/webp"
-        media="(min-width: 768px)"
-      />
-      <source
-        srcset="
-          ../src/images/contact-tablet.jpg    1x,
-          ../src/images/contact-tablet@2x.jpg 2x
-        "
-        media="(min-width: 768px)"
-      />
-      <source
-        srcset="
-          ../src/images/contact-mobile.webp    1x,
-          ../src/images/contact-mobile@2x.webp 2x
-        "
-        type="image/webp"
-      />
-      <source
-        srcset="
-          ../src/images/contact-mobile.jpg    1x,
-          ../src/images/contact-mobile@2x.jpg 2x
-        "
-        media="(min-width: 768px)"
-      />
-
-      <img
-        src="../src/images/contact-mobile.jpg"
-        alt="finance ledger contact manager photo"
-        class="contact__photo photo-wrapper__inner-photo"
-      />
-    </picture>
-  </div>
-
   <div class="container contact__container">
-    <h2 class="contact-section__title section-title">Request Callback</h2>
-
-    <form class="contact-form">
-      <label
-        class="contact-form__field contact-form__field--name"
-        aria-label="input for your name"
-      >
-        <input
-          class="contact-form__input contact-form__input-name"
-          name="name"
-          type="text"
-          placeholder=" "
+    <div class="contact__photo-wrapper photo-wrapper">
+      <picture>
+        <source
+          srcset="
+            ../src/images/contact-desktop.webp    1x,
+            ../src/images/contact-desktop@2x.webp 2x
+          "
+          type="image/webp"
+          media="(min-width: 1360px)"
         />
-        <span class="contact-form__label">Enter your name</span>
-      </label>
-
-      <label
-        class="contact-form__field contact-form__field--email"
-        aria-label="input for your email"
-      >
-        <input
-          class="contact-form__input contact-form__input-email"
-          type="email"
-          name="email"
-          placeholder=" "
-          required
+        <source
+          srcset="
+            ../src/images/contact-desktop.jpg    1x,
+            ../src/images/contact-desktop@2x.jpg 2x
+          "
+          media="(min-width: 1360px)"
         />
-        <span class="contact-form__label">Enter email*</span>
-      </label>
-    </form>
+        <source
+          srcset="
+            ../src/images/contact-tablet.webp    1x,
+            ../src/images/contact-tablet@2x.webp 2x
+          "
+          type="image/webp"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ../src/images/contact-tablet.jpg    1x,
+            ../src/images/contact-tablet@2x.jpg 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ../src/images/contact-mobile.webp    1x,
+            ../src/images/contact-mobile@2x.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ../src/images/contact-mobile.jpg    1x,
+            ../src/images/contact-mobile@2x.jpg 2x
+          "
+          media="(min-width: 768px)"
+        />
 
-    <button class="contact__submit-button button-accent" type="submit">
-      Send
-    </button>
+        <img
+          src="../src/images/contact-mobile.jpg"
+          alt="finance ledger contact manager photo"
+          class="contact__photo photo-wrapper__inner-photo"
+        />
+      </picture>
+    </div>
+
+    <div class="contact__content">
+      <h2 class="contact__title section-title">Request Callback</h2>
+      <form class="contact-form">
+        <label
+          class="contact-form__field contact-form__field--name"
+          aria-label="input for your name"
+        >
+          <input
+            class="contact-form__input contact-form__input-name"
+            name="name"
+            type="text"
+            placeholder=" "
+          />
+          <span class="contact-form__label">Enter your name</span>
+        </label>
+
+        <label
+          class="contact-form__field contact-form__field--email"
+          aria-label="input for your email"
+        >
+          <input
+            class="contact-form__input contact-form__input-email"
+            type="email"
+            name="email"
+            placeholder=" "
+            required
+          />
+          <span class="contact-form__label">Enter email*</span>
+        </label>
+      </form>
+
+      <button class="contact__submit-button button-accent" type="submit">
+        Send
+      </button>
+    </div>
   </div>
 </section>
