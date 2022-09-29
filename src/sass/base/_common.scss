@@ -68,3 +68,60 @@
 
   transition: all 300ms $transition;
 }
+
+.sl-wrapper .sl-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.sl-wrapper .sl-navigation button {
+  width: 200px;
+  height: 200px;
+
+  color: transparent;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+
+  @include transitioned(all);
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &.sl-next {
+    transform: translate(-50%, -50%);
+    background-image: url('../../src/images/next.png');
+  }
+
+  &.sl-prev {
+    transform: translate(50%, -50%);
+    background-image: url('../../src/images/prev.png');
+  }
+}
+
+.sl-wrapper > .sl-close {
+  margin-top: auto;
+  width: 200px;
+  height: 200px;
+  bottom: 70px !important;
+  right: 0 !important;
+  left: 50%;
+  transform: translate(-50%);
+
+  color: transparent;
+  background-image: url('../../src/images/close.png');
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0 !important;
+
+  @include transitioned(opacity);
+
+  &:hover,
+  &:focus {
+    opacity: 1 !important;
+  }
+}
