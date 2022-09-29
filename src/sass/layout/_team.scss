@@ -13,7 +13,8 @@
   padding-bottom: 8px;
   transform: scale(1);
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     transform: scale(1.05);
     box-shadow: $boxShadow;
   }
@@ -24,7 +25,8 @@
   margin-bottom: 22px;
 }
 
-.team__gallery-item:hover .team__member-socials__wrap {
+.team__gallery-item:hover .team__member-socials__wrap,
+.team__gallery-item:focus-within .team__member-socials__wrap {
   opacity: 1;
 }
 
