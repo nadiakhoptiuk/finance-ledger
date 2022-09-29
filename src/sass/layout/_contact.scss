@@ -27,7 +27,6 @@
 
 .contact-form {
   width: 100%;
-  margin-bottom: 24px;
 }
 
 .contact-form__field {
@@ -36,7 +35,7 @@
   line-height: 1.44;
 }
 
-.contact-form__field:not(:last-child) {
+.contact-form__field--name {
   margin-bottom: 16px;
 }
 
@@ -66,6 +65,10 @@
 .contact-form__input:focus,
 .contact-form__input:not(:placeholder-shown) {
   outline: 1px solid $accentColor;
+}
+
+.contact-form__field--email {
+  margin-bottom: 24px;
 }
 
 .contact-form__field {
@@ -136,11 +139,11 @@
     line-height: 1.35;
   }
 
-  .contact-form {
+  .contact-form__field--email {
     margin-bottom: 40px;
   }
 
-  .contact-form__field:not(:last-child) {
+  .contact-form__field--name {
     margin-bottom: 25px;
   }
 
