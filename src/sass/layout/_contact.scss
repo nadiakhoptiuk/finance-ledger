@@ -138,6 +138,11 @@
     font-size: 18px;
     line-height: 1.39;
   }
+
+  .contact-form__input:focus + .contact-form__label,
+  .contact-form__input:not(:placeholder-shown) + .contact-form__label {
+    transform: translateY(-43px);
+  }
 }
 
 @media screen and (min-width: 1360px) {

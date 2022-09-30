@@ -15,10 +15,13 @@ Notiflix.Report.init({
 
 export function onFormSubmit(event) {
   event.preventDefault();
+
+  const userEmail = event?.currentTarget?.elements?.email?.value;
+
   if (
-    requiredFormInputRef.value.trim() === '' ||
-    !requiredFormInputRef.value.includes('@') ||
-    !requiredFormInputRef.value.includes('.')
+    userEmail.trim() === '' ||
+    !userEmail.includes('@') ||
+    !userEmail.includes('.')
   ) {
     requiredFormInputRef.focus();
     requiredFormInputRef.classList.add('invalid');

@@ -34,14 +34,6 @@
   text-align: center;
 }
 
-@media screen and (max-width: 767px) {
-  .hero__title {
-    width: 241px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 .hero__desc {
   margin-bottom: 24px;
   font-size: 26px;
@@ -55,6 +47,14 @@
 
 .hero__button-icon {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .hero__title {
+    width: 241px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: 768px) {

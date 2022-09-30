@@ -613,7 +613,8 @@ var _refs = require("./refs");
 });
 function onFormSubmit(event) {
     event.preventDefault();
-    if ((0, _refs.requiredFormInputRef).value.trim() === "" || !(0, _refs.requiredFormInputRef).value.includes("@") || !(0, _refs.requiredFormInputRef).value.includes(".")) {
+    const userEmail = event?.currentTarget?.elements?.email?.value;
+    if (userEmail.trim() === "" || !userEmail.includes("@") || !userEmail.includes(".")) {
         (0, _refs.requiredFormInputRef).focus();
         (0, _refs.requiredFormInputRef).classList.add("invalid");
         const removeClassTimeout = setTimeout(()=>{

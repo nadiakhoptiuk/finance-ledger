@@ -4,17 +4,6 @@
   background-color: $accentColorSecondary;
 }
 
-@media screen and (max-width: 767px) {
-  .blog__photo-wrapper {
-    position: relative;
-    left: -20px;
-    top: -48px;
-    width: 320px;
-    max-width: 450px;
-    height: 247px;
-  }
-}
-
 .blog__photo {
   object-position: center;
 }
@@ -35,6 +24,17 @@
 .blog__button:focus {
   background-color: $bgColorPrimary;
   color: $accentColorSecondary;
+}
+
+@media screen and (max-width: 767px) {
+  .blog__photo-wrapper {
+    position: relative;
+    left: -20px;
+    top: -48px;
+    width: 320px;
+    max-width: 450px;
+    height: 247px;
+  }
 }
 
 @media screen and (min-width: 768px) {

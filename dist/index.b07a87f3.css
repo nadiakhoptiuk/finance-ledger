@@ -417,14 +417,6 @@ img {
   line-height: 1.35;
 }
 
-@media screen and (max-width: 767px) {
-  .hero__title {
-    width: 241px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 .hero__desc {
   text-align: center;
   margin-bottom: 24px;
@@ -438,6 +430,14 @@ img {
 
 .hero__button-icon {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .hero__title {
+    width: 241px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -699,17 +699,6 @@ img {
   padding: 0 0 58px;
 }
 
-@media screen and (max-width: 767px) {
-  .blog__photo-wrapper {
-    width: 320px;
-    max-width: 450px;
-    height: 247px;
-    position: relative;
-    top: -48px;
-    left: -20px;
-  }
-}
-
 .blog__photo {
   object-position: center;
 }
@@ -725,6 +714,17 @@ img {
 .blog__button:hover, .blog__button:focus {
   color: #0284d0;
   background-color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .blog__photo-wrapper {
+    width: 320px;
+    max-width: 450px;
+    height: 247px;
+    position: relative;
+    top: -48px;
+    left: -20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1085,6 +1085,10 @@ img {
   .contact-form__input {
     font-size: 18px;
     line-height: 1.39;
+  }
+
+  .contact-form__input:focus + .contact-form__label, .contact-form__input:not(:placeholder-shown) + .contact-form__label {
+    transform: translateY(-43px);
   }
 }
 
