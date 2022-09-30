@@ -2,6 +2,7 @@
   "name": "finance-ledger",
   "version": "2.0.0",
   "description": "",
+  "homepage": "https://nadiakhoptiuk.github.io/finance-ledger",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /finance-ledger/"
