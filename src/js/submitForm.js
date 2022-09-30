@@ -16,9 +16,11 @@ export function onFormSubmit(event) {
     requiredFormInputRef.focus();
     requiredFormInputRef.classList.add('invalid');
 
-    setTimeout(() => {
+    const removeClassTimeout = setTimeout(() => {
       requiredFormInputRef.classList.remove('invalid');
     }, 5000);
+
+    clearTimeout(removeClassTimeout);
   } else {
     formRef.reset();
     Notiflix.Notify.success(
