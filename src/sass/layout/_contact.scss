@@ -53,14 +53,9 @@
   outline: 1px solid $accentColor;
 }
 
-.contact-form__input-name:focus + .contact-form__label,
-.contact-form__input-name:not(:placeholder-shown) + .contact-form__label {
+.contact-form__input:focus + .contact-form__label,
+.contact-form__input:not(:placeholder-shown) + .contact-form__label {
   transform: translateY(-40px);
-}
-
-.contact-form__input-email:focus + .contact-form__label,
-.contact-form__input-email:not(:placeholder-shown) + .contact-form__label {
-  transform: translateY(38px);
 }
 
 .contact-form__input:focus,
@@ -84,11 +79,12 @@
   @include transitioned(all);
 }
 
-.contact-form__warning-icon {
+.contact-form__warning-text {
+  display: flex;
+  align-items: center;
   position: absolute;
-  top: 50%;
-  right: 8px;
-  transform: translate(0, -50%);
+  bottom: -25px;
+  color: red;
   opacity: 0;
 
   @include transitioned(all);
