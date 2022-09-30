@@ -13,16 +13,22 @@ export function onFormSubmit(event) {
       "Email field is required and must contains symbols '@' and '.'",
       { timeout: 3000 }
     );
+
     requiredFormInputRef.focus();
     requiredFormInputRef.classList.add('invalid');
 
     const removeClassTimeout = setTimeout(() => {
       requiredFormInputRef.classList.remove('invalid');
-    }, 5000);
 
-    clearTimeout(removeClassTimeout);
+      clearTimeout(removeClassTimeout);
+    }, 5000);
   } else {
     formRef.reset();
+
+    if (requiredFormInputRef.classList.contains('invalid')) {
+      requiredFormInputRef.classList.remove('invalid');
+    }
+
     Notiflix.Notify.success(
       'Thanks for your request. Our manager will contact you',
       { timeout: 3000 }
