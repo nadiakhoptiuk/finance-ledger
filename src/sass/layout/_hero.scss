@@ -5,9 +5,9 @@
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url('../../src/images/showcase-mobile.jpg');
+    url('../../src/images/showcase.jpg');
   // background-image: -webkit-image-set(
-  //   url('../../src/images/showcase-mobile.webp') 1x
+  //   url('../../src/images/showcase.webp') 1x
   // );
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,9 +19,9 @@
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ),
-      url('../../src/images/showcase-mobile@2x.jpg');
+      url('../../src/images/showcase@2x.jpg');
     // background-image: -webkit-image-set(
-    //   url('../../src/images/showcase-mobile@2x.webp') 2x
+    //   url('../../src/images/showcase@2x.webp') 2x
     // );
   }
 }
@@ -60,27 +60,6 @@
 @media screen and (min-width: 768px) {
   .hero-section {
     padding: 378px 0;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url('../../src/images/showcase-tablet.jpg');
-    // background-image: -webkit-image-set(
-    //   url('../../src/images/showcase-tablet.webp') 1x
-    // );
-
-    @include retina2 {
-      background-image: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.5)
-        ),
-        url('../../src/images/showcase-tablet@2x.jpg');
-      // background-image: -webkit-image-set(
-      //   url('../../src/images/showcase-tablet@2x.webp') 2x
-      // );
-    }
   }
 
   .hero__title {
@@ -97,24 +76,5 @@
 @media screen and (min-width: 1360px) {
   .hero-section {
     padding: 272px 0 270px;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url('../../src/images/showcase.jpg');
-    // background-image: -webkit-image-set(url('../../src/images/showcase.webp') );
-
-    @include retina2 {
-      background-image: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.5)
-        ),
-        url('../../src/images/showcase@2x.jpg');
-      // background-image: -webkit-image-set(
-      //   url('../../src/images/showcase@2x.webp') 2x
-      // );
-    }
   }
 }

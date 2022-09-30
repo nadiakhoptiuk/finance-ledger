@@ -11,7 +11,7 @@
 
   &:hover,
   &:focus {
-    color: $accentColorSecondary;
+    color: $accentColorOnHover;
 
     @include transitioned(color);
   }
@@ -23,7 +23,7 @@
 
 .nav__link--current {
   position: relative;
-  color: $accentColorSecondary;
+  color: $accentColor;
 
   &::after {
     position: absolute;
@@ -35,7 +35,7 @@
 
     content: '';
     border-radius: 2px;
-    background-color: $accentColorSecondary;
+    background-color: $accentColor;
   }
 }
 

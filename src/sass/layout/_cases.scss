@@ -96,11 +96,11 @@
     height: 100px;
 
     &.sl-next {
-      transform: translate(30%, -10%);
+      transform: translate(-30px, -10px);
     }
 
     &.sl-prev {
-      transform: translate(-30%, -10%);
+      transform: translate(30%, -10%);
     }
   }
 
@@ -142,17 +142,17 @@
     height: 200px;
 
     &.sl-next {
-      transform: translate(-50%, -40%);
+      transform: translate(-410px, -40%);
     }
 
     &.sl-prev {
-      transform: translate(50%, -40%);
+      transform: translate(410px, -40%);
     }
   }
 
   .sl-wrapper > .sl-close {
     width: 200px;
     height: 200px;
-    bottom: 5% !important;
+    bottom: 20% !important;
   }
 }

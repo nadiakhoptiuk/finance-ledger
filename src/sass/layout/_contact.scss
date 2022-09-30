@@ -84,6 +84,7 @@
   align-items: center;
   position: absolute;
   bottom: -25px;
+
   color: red;
   opacity: 0;
 
@@ -91,6 +92,11 @@
 
   .contact-form__input-email.invalid ~ & {
     opacity: 1;
+  }
+
+  & .warning-text {
+    font-size: 14px;
+    line-height: 1.2;
   }
 }
 
