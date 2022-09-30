@@ -76,13 +76,16 @@
           aria-label="input for your email"
         >
           <input
-            class="contact-form__input contact-form__input-email"
-            type="email"
+            class="contact-form__input contact-form__input-email js-form-input-email"
+            type="text"
             name="email"
             placeholder=" "
-            required
+            title="Email address must contains symbols '@' and '.'"
           />
           <span class="contact-form__label">Enter email*</span>
+          <svg width="35" height="35" class="contact-form__warning-icon">
+            <use href="../src/images/sprite.svg#warning-icon"></use>
+          </svg>
         </label>
 
         <button class="contact__submit-button button-accent" type="submit">

@@ -30,6 +30,7 @@
 }
 
 .contact-form__field {
+  position: relative;
   display: block;
   font-size: 16px;
   line-height: 1.44;
@@ -65,14 +66,14 @@
 .contact-form__input:focus,
 .contact-form__input:not(:placeholder-shown) {
   outline: 1px solid $accentColor;
+
+  &.invalid {
+    outline: 1px solid red;
+  }
 }
 
 .contact-form__field--email {
   margin-bottom: 24px;
-}
-
-.contact-form__field {
-  position: relative;
 }
 
 .contact-form__label {
@@ -81,6 +82,20 @@
   bottom: 13px;
 
   @include transitioned(all);
+}
+
+.contact-form__warning-icon {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translate(0, -50%);
+  opacity: 0;
+
+  @include transitioned(all);
+
+  .contact-form__input-email.invalid ~ & {
+    opacity: 1;
+  }
 }
 
 .contact__submit-button {
