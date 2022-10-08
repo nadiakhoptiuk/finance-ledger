@@ -508,8 +508,7 @@ var _changeHeaderBg = require("./js/changeHeaderBg");
 var _smoothScroll = require("./js/smoothScroll");
 var _submitForm = require("./js/submitForm");
 window.addEventListener("scroll", (0, _changeHeaderBg.changeHeaderBg));
-(0, _refs.navRef).addEventListener("click", (0, _smoothScroll.scrollToAnchor));
-(0, _refs.formRef).addEventListener("submit", (0, _submitForm.onFormSubmit));
+(0, _refs.navRef).addEventListener("click", (0, _smoothScroll.scrollToAnchor)); // formRef.addEventListener('submit', onFormSubmit);
 
 },{"./js/refs":"2WoF2","./js/changeHeaderBg":"zFiGh","./js/smoothScroll":"ax0jI","./js/submitForm":"7IP02"}],"2WoF2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
