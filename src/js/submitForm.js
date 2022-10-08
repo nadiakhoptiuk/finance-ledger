@@ -1,17 +1,17 @@
-import Notiflix from 'notiflix';
-import { Notify, Report } from 'notiflix/build/notiflix-notify-aio';
+// import Notiflix from 'notiflix';
+// import { Notify, Report } from 'notiflix/build/notiflix-notify-aio';
 import { formRef, requiredFormInputRef } from './refs';
 
-Notiflix.Report.init({
-  success: {
-    background: '#32c682',
-    textColor: '#28a745',
-    notiflixIconColor: 'rgba(0,0,0,0.2)',
-    fontAwesomeClassName: 'fas fa-check-circle',
-    fontAwesomeIconColor: 'rgba(0,0,0,0.2)',
-    backOverlayColor: 'rgba(0, 0, 0, 0.8)',
-  },
-});
+// Notiflix.Report.init({
+//   success: {
+//     background: '#32c682',
+//     textColor: '#28a745',
+//     notiflixIconColor: 'rgba(0,0,0,0.2)',
+//     fontAwesomeClassName: 'fas fa-check-circle',
+//     fontAwesomeIconColor: 'rgba(0,0,0,0.2)',
+//     backOverlayColor: 'rgba(0, 0, 0, 0.8)',
+//   },
+// });
 
 export function onFormSubmit(event) {
   event.preventDefault();
@@ -38,13 +38,13 @@ export function onFormSubmit(event) {
       requiredFormInputRef.classList.remove('invalid');
     }
 
-    Notiflix.Report.success(
-      '',
-      'Thanks for your request. Our manager will contact you',
-      'Back to site',
-      function callback() {
-        window.location.href = 'index.html';
-      }
-    );
+    // Notiflix.Report.success(
+    //   '',
+    //   'Thanks for your request. Our manager will contact you',
+    //   'Back to site',
+    //   function callback() {
+    //     window.location.href = 'index.html';
+    //   }
+    // );
   }
 }
