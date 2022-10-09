@@ -30,11 +30,12 @@ export function onFormSubmit(event) {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(
-        () => console.log('Form successfully submitted')
+      .then(res => {
+        console.log('Form successfully submitted');
 
-        // formRef.reset();
-      )
+        formRef.reset();
+        return res;
+      })
       .catch(error => console.log('Sending form failed'));
   }
 }
