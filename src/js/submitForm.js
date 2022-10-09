@@ -38,6 +38,16 @@ export function onFormSubmit(event) {
       requiredFormInputRef.classList.remove('invalid');
     }
 
+    const formData = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(console.log)
+      .catch(error => console.log('Sending form failed'));
+
     // Notiflix.Report.success(
     //   '',
     //   'Thanks for your request. Our manager will contact you',
