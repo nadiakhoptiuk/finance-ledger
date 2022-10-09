@@ -617,9 +617,8 @@ function onFormSubmit(event) {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
             body: new URLSearchParams(formData).toString()
-        }).then((res)=>{
-            (0, _refs.formRef).reset();
-            return res.json();
+        }).then(()=>{
+        // formRef.reset();
         }).catch((error)=>console.log("Sending form failed"));
     }
 }

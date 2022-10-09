@@ -30,9 +30,8 @@ export function onFormSubmit(event) {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(res => {
-        formRef.reset();
-        return res.json();
+      .then(() => {
+        // formRef.reset();
       })
       .catch(error => console.log('Sending form failed'));
   }
