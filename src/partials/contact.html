@@ -57,31 +57,31 @@
 
     <div class="contact__content">
       <h2 class="contact__title section-title">Request Callback</h2>
-      <form class="contact-form js-form" data-netlify="true" name="contact">
-        <label
-          class="contact-form__field contact-form__field--name"
-          aria-label="input for your name"
-        >
+      <form
+        class="contact-form js-form"
+        data-netlify="true"
+        name="contact"
+        method="POST"
+      >
+        <label class="contact-form__field contact-form__field--name">
           <input
             class="contact-form__input contact-form__input-name"
             name="name"
             type="text"
             placeholder=" "
+            aria-label="input for your name"
           />
           <span class="contact-form__label">Enter your name</span>
         </label>
 
-        <label
-          class="contact-form__field contact-form__field--email"
-          aria-label="input for your email"
-        >
+        <label class="contact-form__field contact-form__field--email">
           <input
             class="contact-form__input contact-form__input-email js-form-input-email"
             type="text"
             name="email"
-            value=""
             placeholder=" "
             title="Email address must contains symbols '@' and '.'"
+            aria-label="input for your email"
           />
           <span class="contact-form__label">Enter email*</span>
           <span class="contact-form__warning-text">

@@ -596,19 +596,7 @@ function updateLink(id) {
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7IP02":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-// Notiflix.Report.init({
-//   success: {
-//     background: '#32c682',
-//     textColor: '#28a745',
-//     notiflixIconColor: 'rgba(0,0,0,0.2)',
-//     fontAwesomeClassName: 'fas fa-check-circle',
-//     fontAwesomeIconColor: 'rgba(0,0,0,0.2)',
-//     backOverlayColor: 'rgba(0, 0, 0, 0.8)',
-//   },
-// });
 parcelHelpers.export(exports, "onFormSubmit", ()=>onFormSubmit);
-// import Notiflix from 'notiflix';
-// import { Notify, Report } from 'notiflix/build/notiflix-notify-aio';
 var _refs = require("./refs");
 function onFormSubmit(event) {
     event.preventDefault();
@@ -623,23 +611,16 @@ function onFormSubmit(event) {
     } else {
         if ((0, _refs.requiredFormInputRef).classList.contains("invalid")) (0, _refs.requiredFormInputRef).classList.remove("invalid");
         const formData = new FormData((0, _refs.formRef));
-        fetch("/", {
+        return fetch("/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
             body: new URLSearchParams(formData).toString()
-        }).then(()=>{
+        }).then((res)=>{
             (0, _refs.formRef).reset();
+            return res.json();
         }).catch((error)=>console.log("Sending form failed"));
-    // Notiflix.Report.success(
-    //   '',
-    //   'Thanks for your request. Our manager will contact you',
-    //   'Back to site',
-    //   function callback() {
-    //     window.location.href = 'index.html';
-    //   }
-    // );
     }
 }
 
