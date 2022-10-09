@@ -7,4 +7,4 @@ window.addEventListener('scroll', changeHeaderBg);
 
 navRef.addEventListener('click', scrollToAnchor);
 
-// formRef.addEventListener('submit', onFormSubmit);
+formRef.addEventListener('submit', onFormSubmit);
