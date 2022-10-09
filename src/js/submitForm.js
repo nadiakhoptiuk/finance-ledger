@@ -32,8 +32,6 @@ export function onFormSubmit(event) {
       clearTimeout(removeClassTimeout);
     }, 5000);
   } else {
-    formRef.reset();
-
     if (requiredFormInputRef.classList.contains('invalid')) {
       requiredFormInputRef.classList.remove('invalid');
     }
@@ -45,7 +43,9 @@ export function onFormSubmit(event) {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(console.log)
+      .then(() => {
+        formRef.reset();
+      })
       .catch(error => console.log('Sending form failed'));
 
     // Notiflix.Report.success(

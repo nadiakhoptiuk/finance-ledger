@@ -621,7 +621,6 @@ function onFormSubmit(event) {
             clearTimeout(removeClassTimeout);
         }, 5000);
     } else {
-        (0, _refs.formRef).reset();
         if ((0, _refs.requiredFormInputRef).classList.contains("invalid")) (0, _refs.requiredFormInputRef).classList.remove("invalid");
         const formData = new FormData((0, _refs.formRef));
         fetch("/", {
@@ -630,7 +629,9 @@ function onFormSubmit(event) {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
             body: new URLSearchParams(formData).toString()
-        }).then(console.log).catch((error)=>console.log("Sending form failed"));
+        }).then(()=>{
+            (0, _refs.formRef).reset();
+        }).catch((error)=>console.log("Sending form failed"));
     // Notiflix.Report.success(
     //   '',
     //   'Thanks for your request. Our manager will contact you',
