@@ -38,7 +38,7 @@ export function onFormSubmit(event) {
       requiredFormInputRef.classList.remove('invalid');
     }
 
-    const formData = new FormData(form);
+    const formData = new FormData(formRef);
 
     fetch('/', {
       method: 'POST',

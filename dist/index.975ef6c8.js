@@ -623,7 +623,7 @@ function onFormSubmit(event) {
     } else {
         (0, _refs.formRef).reset();
         if ((0, _refs.requiredFormInputRef).classList.contains("invalid")) (0, _refs.requiredFormInputRef).classList.remove("invalid");
-        const formData = new FormData(form);
+        const formData = new FormData((0, _refs.formRef));
         fetch("/", {
             method: "POST",
             headers: {
