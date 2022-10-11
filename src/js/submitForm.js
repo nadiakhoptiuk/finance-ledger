@@ -1,8 +1,6 @@
 import { formRef, requiredFormInputRef } from './refs';
 
 export function onFormSubmit(event) {
-  event.preventDefault();
-
   const userEmail = event?.currentTarget?.elements?.email?.value;
 
   if (
@@ -18,6 +16,8 @@ export function onFormSubmit(event) {
 
       clearTimeout(removeClassTimeout);
     }, 5000);
+
+    event.preventDefault();
   } else {
     if (requiredFormInputRef.classList.contains('invalid')) {
       requiredFormInputRef.classList.remove('invalid');
@@ -30,11 +30,10 @@ export function onFormSubmit(event) {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(res => {
+      .then(() => {
         console.log('Form successfully submitted');
 
         formRef.reset();
-        return res;
       })
       .catch(error => console.log('Sending form failed'));
   }
