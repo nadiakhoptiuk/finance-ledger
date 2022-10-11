@@ -599,7 +599,6 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "onFormSubmit", ()=>onFormSubmit);
 var _refs = require("./refs");
 function onFormSubmit(event) {
-    event.preventDefault();
     const userEmail = event?.currentTarget?.elements?.email?.value;
     if (userEmail.trim() === "" || !userEmail.includes("@") || !userEmail.includes(".")) {
         (0, _refs.requiredFormInputRef).focus();
@@ -608,6 +607,7 @@ function onFormSubmit(event) {
             (0, _refs.requiredFormInputRef).classList.remove("invalid");
             clearTimeout(removeClassTimeout);
         }, 5000);
+        event.preventDefault();
     } else {
         if ((0, _refs.requiredFormInputRef).classList.contains("invalid")) (0, _refs.requiredFormInputRef).classList.remove("invalid");
         const formData = new FormData((0, _refs.formRef));
@@ -617,10 +617,9 @@ function onFormSubmit(event) {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
             body: new URLSearchParams(formData).toString()
-        }).then((res)=>{
+        }).then(()=>{
             console.log("Form successfully submitted");
             (0, _refs.formRef).reset();
-            return res;
         }).catch((error)=>console.log("Sending form failed"));
     }
 }
